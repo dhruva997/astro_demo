@@ -1,0 +1,37 @@
+---
+const response = await fetch(
+    "https://shreekailash.com/wp-json/wp/v2/pages/76"
+);
+
+const posts = await response.json();
+// console.log(posts);
+---
+<link rel='css' href='https://shreekailash.com/wp-content/cache/flying-press/867733cba543.header.min.css'/>
+<link rel='css' href='https://shreekailash.com/wp-content/cache/flying-press/51f80a93089d.content.min.css'/>
+<link rel='css' href='https://shreekailash.com/wp-content/cache/flying-press/1a577cf8e4f8.footer.min.css' >
+<link rel='css' href='https://shreekailash.com/wp-content/cache/flying-press/48ddb02649ea.style-blocks-rowlayout.css' >
+<link rel='css' href='https://shreekailash.com/wp-content/cache/flying-press/549fc2a5d8e3.style-blocks-column.css' >
+<link rel='css' href='https://shreekailash.com/wp-content/cache/flying-press/269a25e36685.style-blocks-advancedbtn.css' >
+<link rel='css' href='https://shreekailash.com/wp-content/cache/flying-press/2f90364edcb6.style-blocks-image.css' >
+<link rel='css' href='https://shreekailash.com/wp-content/cache/flying-press/bc8a6833e68c.style-blocks-testimonials.css' >
+
+
+
+
+
+
+<h1>Astro page</h1>
+
+<ul>
+
+
+
+<li>
+
+
+<div set:html={posts.content.rendered}></div>
+
+</li>
+
+
+</ul>

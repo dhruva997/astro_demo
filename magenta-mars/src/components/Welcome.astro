@@ -1,0 +1,23 @@
+---
+import { getPosts } from "../lib/wordpress";
+import DisplayAstroComponent from "../pages/display.astro";
+const posts = await getPosts();
+---
+
+<html>
+  <body>
+    <h1>Blog1</h1>
+
+    <ul>
+      {posts.map(post => (
+        <li>
+          <a href={`/blog/${post.slug}`}>
+            {post.title.rendered.replace(/<[^>]*>/g, '')}
+          </a>
+        </li>
+		
+      ))}
+    </ul>
+	<display></display>
+  </body>
+</html>
